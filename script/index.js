@@ -33,5 +33,24 @@ function iniciarSesion() {
 }
 
 function capturarDatosFinanciamiento() {
-  console.log('otra funcion')
+  let otroCliente = true;
+
+  while( otroCliente ) {
+    const prestamo = parseInt(prompt('Ingrese el valor del préstamo:'));
+    const tasaInteres = parseInt(prompt('Ingrese la tasa de interes:'));
+    const meses = parseInt(prompt('Ingrese el plazo en meses:'));
+
+    calcularFinanciamiento( prestamo, tasaInteres, meses );
+
+    otroCliente = confirm('¿Desea cotizar otro cliente?');
+  }
+
+  document.querySelector('body').innerHTML = `
+        <h1>El sistema ha finalizado!!</h1>
+        <p>Recargue la página</p>
+      `
 }
+
+ function calcularFinanciamiento( prestamo, tasaInteres, meses ) {
+  
+ }
