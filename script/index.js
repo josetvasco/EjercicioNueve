@@ -66,5 +66,11 @@ function capturarDatosFinanciamiento() {
   }
 
   function mostrarCuotasMensuales( cuotaMensual, meses, tasaInteres, prestamo ) {
-    
+    alert(`
+    ------Resumen------\n
+    Total prestamo: $${Math.round(prestamo)}\n
+    Tasa de interes: ${tasaInteres}\n
+    Meses: ${meses}\n
+    Cuota mensual: $${Math.round(cuotaMensual)}\n
+    `);
   }
