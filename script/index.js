@@ -52,5 +52,19 @@ function capturarDatosFinanciamiento() {
 }
 
  function calcularFinanciamiento( prestamo, tasaInteres, meses ) {
-  
- }
+    if( meses < 12 ) {
+      tasaInteres += 2;
+    } else if ( meses > 36 ) {
+      tasaInteres -= 1;
+    }
+
+    prestamo = prestamo * (1 + (tasaInteres / 100));
+
+    let cuotaMensual = prestamo / meses;
+
+    mostrarCuotasMensuales( cuotaMensual, meses, tasaInteres, prestamo );
+  }
+
+  function mostrarCuotasMensuales( cuotaMensual, meses, tasaInteres, prestamo ) {
+    
+  }
